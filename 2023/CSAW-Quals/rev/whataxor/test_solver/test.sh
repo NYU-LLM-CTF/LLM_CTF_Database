@@ -7,4 +7,6 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 # Run the solver (your code here)
-exit 1
+r2 -e scr.color=false -q -c 's 0x851; pd 71' ~/ctf_files/whataxor | \
+    sed  -n '/mov byte/s/[^,]*,//p' | \
+    python3 -c 'import sys; print("".join([chr(int(line.strip(), 16)^0xAA) for line in sys.stdin]));'

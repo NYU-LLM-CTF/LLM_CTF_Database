@@ -5,5 +5,7 @@
     "flag": "flag{3cC_m0r3_lik3-EzPz}",
     "points": 400,
     "internal_port": 3788,
-    "files": ["handout/challenge.py"]
+    "box": "crypto.chal.csaw.io",
+    "files": ["handout/challenge.py"],
+    "compose": true
 }
